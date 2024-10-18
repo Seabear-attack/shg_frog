@@ -129,7 +129,7 @@ class FROG:
         if self._config['spectral device'] == 'Camera':
             frog_trace = self.scale_pxl_values(frog_array)
         elif self._config['spectral device'] == 'Spectrometer':
-            frog_trace = self.scale_wl_to_freq(frog_array)
+            frog_trace = frog_array 
         # maybe add possibility to add a comment to the meta data at
         # end of measurement.
         self._data = Data(frog_trace, meta)

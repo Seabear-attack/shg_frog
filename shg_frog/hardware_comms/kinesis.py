@@ -34,6 +34,7 @@ class ThorlabsKinesisMotor(LinearMotor):
         try:
             return self.motor.is_moving()
         except ThorlabsError:
+            print('motion')
             return True
 
     def move_abs(self, loc: float):
@@ -45,6 +46,7 @@ class ThorlabsKinesisMotor(LinearMotor):
             try:
                 self.motor.move_to(loc, scale=True)
             except ThorlabsError:
+                print('thorlabs move')
                 pass
 
     def move_by(self, dist):
